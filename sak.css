@@ -1,0 +1,124 @@
+@font-face { font-family: "Kajiro"; src: url("659dbdfd5a080be8d348316f_PPNeueMachina_ Light.woff") format("truetype"); font-weight: normal; font-style: normal; }
+/* custom Tailwind-like utility */
+.font-kajiro {
+  font-family: "Kajiro", sans-serif;
+}
+
+:root {
+    --salmon: rgb(243, 160, 108);
+    --black: rgb(0, 0, 0);
+    --cyan: rgb(138, 241, 241);
+    --white: rgb(255, 255, 255);
+    --dsalmon: rgb(80, 41, 37);
+    --dcyan: rgb(40, 69, 71);
+}
+body{
+    transition: background-color ease-out .5s;
+}
+.vdodiv{
+    clip-path: circle(var(--clip) at 50% 50%);
+}
+*::selection {
+    background-color: var(--salmon);
+}
+
+body[theme="black"] {
+    background-color: var(--black);
+} 
+body[theme="black"] .section {
+    color: var(--white);
+}
+
+body[theme="cyan"] {
+    background-color: var(--cyan);
+}                    
+body[theme="cyan"] .section {
+    color: var(--dcyan);
+}
+
+body[theme="salmon"] {
+    background-color: var(--salmon);
+}  
+body[theme="salmon"] .section {
+    color: var(--dsalmon);
+}
+
+body[theme="white"] {
+    background-color: var(--black);
+}                    
+body[theme="white"] .section {
+    color: var(--black);
+}
+
+
+.btnoo {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btnoo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.btnoo span {
+  display: inline-block;
+  transition: transform 0.5s ease, color 0.5s ease;
+}
+
+.btnoo:hover span {
+  transform: translateX(10px) rotate(2deg);
+  color: #fff;
+}
+
+.btnoo div.absolute {
+  transition: transform 0.5s ease;
+  transform-origin: left center;
+}
+
+
+.capsule {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.capsule:hover {
+  transform: translateY(-10px) rotate(0deg) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.capsule img {
+  transition: transform 0.4s ease;
+}
+
+.capsule:hover img {
+  transform: scale(1.1) rotate(3deg);
+}
+
+
+.btmtext h1 {
+  transition: transform 0.5s ease, color 0.5s ease;
+}
+
+.btmtext:hover h1 {
+  transform: translateY(-5px) scale(1.02);
+  color: #f65505;
+}
+
+.elem h1 {
+  transition: transform 0.4s ease, color 0.4s ease;
+}
+
+.elem:hover h1 {
+  transform: translateY(-5px) scale(1.1);
+  color: rgb(255, 255, 255);
+}
+
+.imgdiv {
+  transition: transform 0.4s ease;
+}
+
+.elem:hover .imgdiv {
+  transform: scale(1.1) rotate(5deg);
+}
